@@ -14,5 +14,5 @@ To read a table in R directly, *Copy link address* by right clicking the *Downlo
 ![Imgur](https://i.imgur.com/PWbrdo9.png)
 
 
-1. [RAPDB_MSU_ID_conversion_20190403.txt.gz](./RAPDB_MSU_ID_conversion_20190403.txt.gz). Refer to [my post](https://jhuang.netlify.com/post/rice-rapdb-to-msu7-id-conversion/) on how I got this table.
+1. RAPDB_MSU_ID_conversion_20190403.txt.gz. For convert rice gene IDs from RAPDB to MSU7 and vice versa. Refer to [my post](https://jhuang.netlify.com/post/rice-rapdb-to-msu7-id-conversion/) on how I got this table.
 
