@@ -4,8 +4,9 @@ author: Ji Huang
 
 date: 2019-04-09
 
-last modified date: 2019-04-09
+last modified date: 2019-04-10
 
+---
 
 This is my dataset repository that are publicly available. Most of these are tables that I constantly refer to. If interested, you can used **[readr](https://readr.tidyverse.org/index.html)** package to retrieve it from Github.
 
@@ -15,8 +16,14 @@ To read a table in R directly, *Copy link address* by right clicking the *Downlo
 
 PS: FTP links are not rendered correctly in Github. Please go to the `md` file to find out.
 
+---
 
 1. **RAPDB_MSU_ID_conversion_20190403.txt.gz**. For convert rice gene IDs from RAPDB to MSU7 and vice versa. Refer to [my post](https://jhuang.netlify.com/post/rice-rapdb-to-msu7-id-conversion/) on how I got this table.
+
+```r
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/RAPDB_MSU_ID_conversion_20190403.txt.gz")
+```
+
 
 | RAPDB        	| MSU7           	|
 |--------------	|----------------	|
@@ -27,6 +34,9 @@ PS: FTP links are not rendered correctly in Github. Please go to the `md` file t
 
 2. **IRGSP-1.0_representative_annotation_2019-03-22_jhuang.tsv.gz**. This table includes rice gene annotation from RAPDB. It can be downloaded from [*Gene annotation information in tab-delimited text format*](https://rapdb.dna.affrc.go.jp/download/irgsp1.html). I kept some useful columns and renamed the column names. There are **5339** genes have more than one transcripts, so there are multiple rows for these genes.
 
+```r
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/IRGSP-1.0_representative_annotation_2019-03-22_jhuang.tsv.gz")
+```
 
 | Transcript_ID   	| Locus_ID     	| Description                                	| Oryzabase_synonym                     	| Oryzabase_name   	| Transcript_evidence 	| ORF_evidence 	| FLcDNA_cloneID 	|
 |-----------------	|--------------	|--------------------------------------------	|---------------------------------------	|------------------	|---------------------	|--------------	|----------------	|
@@ -35,6 +45,10 @@ PS: FTP links are not rendered correctly in Github. Please go to the `md` file t
 | Os01t0100300-00 	| Os01g0100300 	| Cytochrome P450 domain containing protein. 	| AK365211 (DDBJ)                       	| B9EYQ3 (UniProt) 	|                     	|              	|                	|
 
 3. **ptfdb_maizeTF_list_orgainzed_v4.txt.gz**. This is a list of *Transcriptional Factors* from [Plant TFDB](http://planttfdb.cbi.pku.edu.cn/download.php#oid_tfid). The original IDs was v3. I added the v4 IDs.
+
+```r
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/ptfdb_maizeTF_list_orgainzed_v4.txt.gz")
+```
 
 | v3id             	| type 	| v4id           	|
 |------------------	|------	|----------------	|
@@ -47,6 +61,10 @@ PS: FTP links are not rendered correctly in Github. Please go to the `md` file t
 	+ B73v4.gene_function.txt. Contains maize [gene short description] based on Gramene, [ftp link here](ftp://ftp.gramene.org/pub/gramene/archives/PAST_RELEASES/release-58/gff3/zea_mays/gene_function/B73v4.gene_function.txt).
 
 	+ maize.v3TOv4.geneIDhistory.txt. Contains maize gene version 3 to version 4 conversion, [ftp link here](ftp://ftp.gramene.org/pub/gramene/archives/PAST_RELEASES/release-58/gff3/zea_mays/gene_id_mapping_v3_to_v4/maize.v3TOv4.geneIDhistory.txt).
+
+```r
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/maize_v3Tov4_function.tsv.gz")
+```
 
 | v3id             	| v4id           	| changes                       	| method                   	| type   	| annotation                    	| source           	|
 |------------------	|----------------	|-------------------------------	|--------------------------	|--------	|-------------------------------	|------------------	|
