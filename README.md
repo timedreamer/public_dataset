@@ -21,7 +21,7 @@ PS: FTP links are not rendered correctly in Github. Please go to the `md` file t
 1. **RAPDB_MSU_ID_conversion_20190411.txt.bz2**. For convert rice gene IDs from RAPDB to MSU7 and vice versa. Refer to [my post](https://jhuang.netlify.com/post/rice-rapdb-to-msu7-id-conversion/) on how I got this table.
 
 ```r
-readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/RAPDB_MSU_ID_conversion_20190411.txt.bz2")
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/RAPDB_MSU_ID_conversion_20190411.txt.gz")
 ```
 
 | rapdb        	| msu7           	|
@@ -33,7 +33,7 @@ readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/RAPDB_
 2. **rice_annotation_rapdb_msu7_20190412.txt.bz2**. This table includes rice gene annotation from RAPDB and MSU. RAPDB annotation was downloaded from [*Gene annotation information in tab-delimited text format*](https://rapdb.dna.affrc.go.jp/download/irgsp1.html); MSU7 annotation was from [its website](http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/). I kept some useful columns and renamed the column names. There are **5339** RAPDB genes have more than one transcripts. All columns are from RAPDB except `msu7` and `msu7_annotation`.
 
 ```r
-readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/rice_annotation_rapdb_msu7_20190412.txt.bz2")
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/rice_annotation_rapdb_msu7_20190412.txt.gz")
 ```
 
 | rapdb        	| transcript      	| description                           	| msu7           	| msu7_annotation                          	| oryzabase_synonym 	| oryzabase_name 	| transcript_evidence                   	| orf_evidence     	| flcDNA_cloneID 	|
