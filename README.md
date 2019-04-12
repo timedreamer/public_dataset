@@ -18,31 +18,29 @@ PS: FTP links are not rendered correctly in Github. Please go to the `md` file t
 
 ---
 
-1. **RAPDB_MSU_ID_conversion_20190403.txt.gz**. For convert rice gene IDs from RAPDB to MSU7 and vice versa. Refer to [my post](https://jhuang.netlify.com/post/rice-rapdb-to-msu7-id-conversion/) on how I got this table.
+1. **RAPDB_MSU_ID_conversion_20190411.txt.bz2**. For convert rice gene IDs from RAPDB to MSU7 and vice versa. Refer to [my post](https://jhuang.netlify.com/post/rice-rapdb-to-msu7-id-conversion/) on how I got this table.
 
 ```r
-readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/RAPDB_MSU_ID_conversion_20190403.txt.gz")
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/RAPDB_MSU_ID_conversion_20190411.txt.bz2")
 ```
 
-
-| RAPDB        	| MSU7           	|
+| rapdb        	| msu7           	|
 |--------------	|----------------	|
 | Os01g0100100 	| LOC_Os01g01010 	|
 | Os01g0100200 	| LOC_Os01g01019 	|
-| Os01g0100300 	| None           	|
 
 
-2. **IRGSP-1.0_representative_annotation_2019-03-22_jhuang.tsv.gz**. This table includes rice gene annotation from RAPDB. It can be downloaded from [*Gene annotation information in tab-delimited text format*](https://rapdb.dna.affrc.go.jp/download/irgsp1.html). I kept some useful columns and renamed the column names. There are **5339** genes have more than one transcripts, so there are multiple rows for these genes.
+2. **rice_annotation_rapdb_msu7_20190412.txt.bz2**. This table includes rice gene annotation from RAPDB and MSU. RAPDB annotation was downloaded from [*Gene annotation information in tab-delimited text format*](https://rapdb.dna.affrc.go.jp/download/irgsp1.html); MSU7 annotation was from [its website](http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/). I kept some useful columns and renamed the column names. There are **5339** RAPDB genes have more than one transcripts. All columns are from RAPDB except `msu7` and `msu7_annotation`.
 
 ```r
-readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/IRGSP-1.0_representative_annotation_2019-03-22_jhuang.tsv.gz")
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/rice_annotation_rapdb_msu7_20190412.txt.bz2")
 ```
 
-| Transcript_ID   	| Locus_ID     	| Description                                	| Oryzabase_synonym                     	| Oryzabase_name   	| Transcript_evidence 	| ORF_evidence 	| FLcDNA_cloneID 	|
-|-----------------	|--------------	|--------------------------------------------	|---------------------------------------	|------------------	|---------------------	|--------------	|----------------	|
-| Os01t0100100-01 	| Os01g0100100 	| RabGAP/TBC domain containing protein.      	| AK242339 (DDBJ, antisense transcript) 	| Q655M0 (UniProt) 	| J075199P03          	|              	|                	|
-| Os01t0100200-01 	| Os01g0100200 	| Conserved hypothetical protein.            	| AK059894 (DDBJ, Best hit)             	| B8ACR2 (UniProt) 	| 006-208-E01         	|              	|                	|
-| Os01t0100300-00 	| Os01g0100300 	| Cytochrome P450 domain containing protein. 	| AK365211 (DDBJ)                       	| B9EYQ3 (UniProt) 	|                     	|              	|                	|
+| rapdb        	| transcript      	| description                           	| msu7           	| msu7_annotation                          	| oryzabase_synonym 	| oryzabase_name 	| transcript_evidence                   	| orf_evidence     	| flcDNA_cloneID 	|
+|--------------	|-----------------	|---------------------------------------	|----------------	|------------------------------------------	|-------------------	|----------------	|---------------------------------------	|------------------	|----------------	|
+| Os01g0100100 	| Os01t0100100-01 	| RabGAP/TBC domain containing protein. 	| LOC_Os01g01010 	| TBC domain containing protein, expressed 	| NA                	| NA             	| AK242339 (DDBJ, antisense transcript) 	| Q655M0 (UniProt) 	| J075199P03     	|
+| Os01g0100100 	| Os01t0100100-01 	| RabGAP/TBC domain containing protein. 	| LOC_Os01g01010 	| TBC domain containing protein, expressed 	| NA                	| NA             	| AK242339 (DDBJ, antisense transcript) 	| Q655M0 (UniProt) 	| J075199P03     	|
+
 
 3. **ptfdb_maizeTF_list_orgainzed_v4.txt.gz**. This is a list of *Transcriptional Factors* from [Plant TFDB](http://planttfdb.cbi.pku.edu.cn/download.php#oid_tfid). The original IDs was v3. I added the v4 IDs.
 
