@@ -4,7 +4,7 @@ author: Ji Huang
 
 date: 2019-04-09
 
-last modified date: 2019-04-12
+last modified date: 2019-09-04
 
 ---
 
@@ -67,6 +67,14 @@ readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/maize_
 | v3id             	| v4id           	| changes                       	| method                   	| type   	| annotation                    	| source           	|
 |------------------	|----------------	|-------------------------------	|--------------------------	|--------	|-------------------------------	|------------------	|
 | AC148152.3_FG001 	| Zm00001d007725 	| No_change_in_genomic_sequence 	| Gene_Tree/Direct_mapping 	| 1-to-1 	| Ankyrin repeat family protein 	| [source:homolog] 	|
+
+5. **maizeTF_grassius_v4id_20190904.tsv.gz**. This table has both the v3 id and v4 id for Maize Grassius TF plasmids.
+
+**Plate Address**|**Stock number**|**GenBank accession**|**Gene model**|**Transcript**|**Template**|**type**|**v4id**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+OSU\_P\_1\_A1|pUT4010|KJ727026|GRMZM2G122614|GRMZM2G122614\_T01|Synthetic|ARF|Zm00001d003011
+OSU\_P\_1\_B1|pUT4013|KJ727027|GRMZM2G121111|GRMZM2G121111\_T01|Synthetic|MYB\_related|Zm00001d024809
+
 
 
 
