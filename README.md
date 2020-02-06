@@ -78,6 +78,10 @@ OSU\_P\_1\_B1|pUT4013|KJ727027|GRMZM2G121111|GRMZM2G121111\_T01|Synthetic|MYB\_r
 
 6. **Ath_TF_list.txt**. This is the Arabidopsis TF genes based on [PlantTFDB](http://planttfdb.cbi.pku.edu.cn/download.php). This file was downloaded on 2020-02-06.
 
+```r
+readr::read_tsv("https://raw.githubusercontent.com/timedreamer/public_dataset/master/Ath_TF_list.txt")
+```
+
 | TF_ID       | Gene_ID   | Family |
 |-------------|-----------|--------|
 | AT3G25730.1 | AT3G25730 | RAV    |
