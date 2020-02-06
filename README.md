@@ -91,6 +91,10 @@ readr::read_tsv("https://raw.githubusercontent.com/timedreamer/public_dataset/ma
 
 7. **ptfdb-grassius_maizeTF_list_orgainzed_v4.txt**. This is the combined maize TF list from PlantTFDB and Grassius.
 
+```r
+readr::read_tsv("https://raw.githubusercontent.com/timedreamer/public_dataset/master/ptfdb-grassius_maizeTF_list_orgainzed_v4.txt")
+```
+
 | v3id          | name    | type     | v4id           |
 |---------------|---------|----------|----------------|
 | GRMZM2G048582 | ZmNLP17 | Nin-like | Zm00001d006293 |
