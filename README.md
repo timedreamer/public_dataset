@@ -4,7 +4,7 @@ author: Ji Huang
 
 date: 2019-04-09
 
-last modified date: 2019-09-04
+last modified date: 2020-02-06
 
 ---
 
@@ -76,5 +76,19 @@ OSU\_P\_1\_A1|pUT4010|KJ727026|GRMZM2G122614|GRMZM2G122614\_T01|Synthetic|ARF|Zm
 OSU\_P\_1\_B1|pUT4013|KJ727027|GRMZM2G121111|GRMZM2G121111\_T01|Synthetic|MYB\_related|Zm00001d024809
 
 
+6. **Ath_TF_list.txt**. This is the Arabidopsis TF genes based on [PlantTFDB](http://planttfdb.cbi.pku.edu.cn/download.php). This file was downloaded on 2020-02-06.
+
+| TF_ID       | Gene_ID   | Family |
+|-------------|-----------|--------|
+| AT3G25730.1 | AT3G25730 | RAV    |
+| AT1G68840.1 | AT1G68840 | RAV    |
+| AT1G68840.2 | AT1G68840 | RAV    |
 
 
+7. **ptfdb-grassius_maizeTF_list_orgainzed_v4.txt**. This is the combined maize TF list from PlantTFDB and Grassius.
+
+| v3id          | name    | type     | v4id           |
+|---------------|---------|----------|----------------|
+| GRMZM2G048582 | ZmNLP17 | Nin-like | Zm00001d006293 |
+| GRMZM2G130374 | ZmWRKY3 | WRKY     | Zm00001d030969 |
+| GRMZM2G398506 | ZmWRKY1 | WRKY     | Zm00001d021947 |
