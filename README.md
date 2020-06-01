@@ -4,7 +4,7 @@ author: Ji Huang
 
 date: 2019-04-09
 
-last modified date: 2020-02-06
+last modified date: 2020-06-01
 
 ---
 
@@ -100,3 +100,15 @@ readr::read_tsv("https://raw.githubusercontent.com/timedreamer/public_dataset/ma
 | GRMZM2G048582 | ZmNLP17 | Nin-like | Zm00001d006293 |
 | GRMZM2G130374 | ZmWRKY3 | WRKY     | Zm00001d030969 |
 | GRMZM2G398506 | ZmWRKY1 | WRKY     | Zm00001d021947 |
+
+8. **ptfdb_Osj_TF_list_wRAPDB.tsv**. The rice TF list from PlantTFDB and then converted to RAPDB IDs.
+
+```r
+readr::read_tsv("https://raw.githubusercontent.com/timedreamer/public_dataset/master/ptfdb_Osj_TF_list_wRAPDB.tsv")
+```
+
+| TF_ID            | Gene_ID        | Family | rapdb        |
+|------------------|----------------|--------|--------------|
+| LOC_Os01g04750.1 | LOC_Os01g04750 | RAV    | Os01g0140700 |
+| LOC_Os01g04800.1 | LOC_Os01g04800 | RAV    | Os01g0141000 |
+| LOC_Os05g47650.1 | LOC_Os05g47650 | RAV    | Os05g0549800 |
