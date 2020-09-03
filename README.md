@@ -4,7 +4,7 @@ author: Ji Huang
 
 date: 2019-04-09
 
-last modified date: 2020-06-01
+last modified date: 2020-09-03
 
 ---
 
@@ -53,6 +53,7 @@ readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/ptfdb_
 | AC149475.2_FG005 	| C2H2 	| Zm00001d048404 	|
 | AC149818.2_FG008 	| C2H2 	| Zm00001d048400 	|
 | AC149818.2_FG009 	| LBD  	| Zm00001d048401 	|
+
 
 4. **maize_v3Tov4_function.tsv.gz**. This table has both maize v3 to v4 id mapping and v4 functions. Both came from GRAMENE and I combined them together.
 
@@ -112,3 +113,22 @@ readr::read_tsv("https://raw.githubusercontent.com/timedreamer/public_dataset/ma
 | LOC_Os01g04750.1 | LOC_Os01g04750 | RAV    | Os01g0140700 |
 | LOC_Os01g04800.1 | LOC_Os01g04800 | RAV    | Os01g0141000 |
 | LOC_Os05g47650.1 | LOC_Os05g47650 | RAV    | Os05g0549800 |
+
+
+9. **maize.B73.AGPv4.aggregate.gaf.gz**. The maize GAMER-GO annotation. It
+   contains `GENE -- GO_ID` mapping. The orginial file was downloaded from [MaizeGDB FTP](https://download.maizegdb.org/GeneFunction_and_Expression/Maize-GAMER/B73_RefGen_v4/e.agg_data/).
+
+```r
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/maize.B73.AGPv4.aggregate.gaf.gz", skip=1)
+
+# for use with `clusterProfiler`, you just need two columns.
+zmaGO <- zmaGO %>% select(term_accession, db_object_id)
+```
+
+10. **agriGOv2_GOConsortium_term_v201608.txt.gz**. The `GO_ID -- GO_annotation` mapping. The file was downloaded from [AgriGOv2](http://systemsbiology.cau.edu.cn/agriGOv2/download.php).
+
+```r
+readr::read_tsv("https://github.com/timedreamer/public_dataset/raw/master/agriGOv2_GOConsortium_term_v201608.txt.gz", col_names = c("GO","type","name","number")) %>% select(GO, name)
+```
+
+
